@@ -63,11 +63,12 @@ export default function LoginForm() {
         </Button>
       </form>
       <p className="mt-4 text-center text-sm sm:text-base">
-        Don't have an account?{' '}
+         Don&#39;t have an account?{' '}
         <Link href={registerLink} className="text-blue-500 hover:underline">
-          Register
-        </Link>
-      </p>
+         Register
+       </Link>
+    </p>
+
     </div>
   );
 }
