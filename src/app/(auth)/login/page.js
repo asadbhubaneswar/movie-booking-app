@@ -1,10 +1,13 @@
+import { Suspense } from 'react';
 import LoginForm from '../../../components/LoginForm';
 import { Toaster } from 'react-hot-toast';
 
 export default function Login() {
   return (
     <div>
-      <LoginForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoginForm />
+      </Suspense>
       <Toaster />
     </div>
   );
