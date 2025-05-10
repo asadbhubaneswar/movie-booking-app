@@ -17,10 +17,12 @@ export default function AddMovie() {
   const router = useRouter();
 
   
+  useEffect(() => {
   if (!isAdmin()) {
-    router.push('/'); 
-    return null;
+    router.push('/');
   }
+}, []);
+
 
   // It will fetch movies on mount and when updateTrigger changes
   useEffect(() => {
