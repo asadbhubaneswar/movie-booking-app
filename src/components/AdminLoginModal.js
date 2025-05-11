@@ -19,12 +19,14 @@ export default function AdminLoginModal({ isOpen, onClose }) {
     }
     // Checking predefined credentials for admin login. Not like generic login for users
     if (email === 'admin@gmail.com' && password === 'admin') {
-      router.push('/add-movie'); 
-      setAdmin(); 
-      toast.success('Admin logged in successfully');
-      onClose(); 
-     
-    } else {
+  toast.success('Admin logged in successfully');
+  setAdmin();
+  router.push('/add-movie');
+  
+  setTimeout(() => {
+    onClose();  // Delay because the the homepage shows due to immediate login modal close
+  }, 150); 
+} else {
       toast.error('Invalid admin credentials');
     }
   };
